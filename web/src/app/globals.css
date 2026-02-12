@@ -24,3 +24,41 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+  --bg: 10 10 12;
+  --card: 16 16 20;
+  --text: 240 240 245;
+
+  --neon-green: 57 255 20;
+  --neon-purple: 168 85 247;
+
+  --muted: 160 160 175;
+  --border: 255 255 255;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+.bg-vibe {
+  background:
+    radial-gradient(900px circle at 20% 10%, rgba(var(--neon-purple), 0.12), transparent 55%),
+    radial-gradient(800px circle at 80% 70%, rgba(var(--neon-green), 0.10), transparent 55%),
+    rgb(var(--bg));
+}
+
+.card {
+  background: rgba(var(--card), 0.72);
+  border: 1px solid rgba(var(--border), 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.glow-green {
+  box-shadow: 0 0 18px rgba(var(--neon-green), 0.35);
+}
+
+.glow-purple {
+  box-shadow: 0 0 18px rgba(var(--neon-purple), 0.35);
+}
